@@ -1,0 +1,35 @@
+<div class="main">
+    <div class="col-lg-5 shadow p-4 mx-auto">
+        <form action="" (ngSubmit)='register()'>
+            <p class="display-4">Register Form</p>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="">Firstname</label>
+                <input type="text" class="form-control" [(ngModel)]="user.firstName" name="firstName">
+            </div>
+            <div class="form-group mt-3">
+                <label for="">Lastname</label>
+                <input type="text" class="form-control" [(ngModel)]="user.lastName" name="lastName">
+            </div>
+            <div class="form-group mt-3">
+                <label for="">Email</label>
+                <input type="text" class="form-control" [(ngModel)]="user.email" name="email">
+            </div>
+            <div class="form-group mt-3">
+                <label for="">Password</label>
+                <input type="password" class="form-control" [(ngModel)]="user.password" name="password">
+            </div>
+
+            <!-- Address Input Field -->
+            <div class="form-group mt-3">
+                <label for="">Address</label>
+                <input type="text" class="form-control" #addr (keyup)="onAddressType(addr.value)" name="address">
+            </div>
+
+            <!-- submit button -->
+            <div class="form-group mt-3">
+                <input type="submit" class="btn btn-success" value="Register">
+            </div>
+        </form>
+    </div>
+</div>
