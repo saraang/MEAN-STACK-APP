@@ -39,10 +39,10 @@ const addressSchema = new Schema({
           "type": "String"
         },
         "pincode": {
-          "type": "Date"
+          "type": "Number"
         },
         "formattedAddress": {
-          "type": "Date"
+          "type": "String"
         },
         "eLoc": {
           "type": "String"

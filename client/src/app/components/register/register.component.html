@@ -23,7 +23,16 @@
             <!-- Address Input Field -->
             <div class="form-group mt-3">
                 <label for="">Address</label>
-                <input type="text" class="form-control" #addr (keyup)="onAddressType(addr.value)" name="address">
+                <input type="text" 
+                        class="form-control" 
+                        [(ngModel)]="selectedAddress.formattedAddress"
+                        (keyup)="onAddressType()" name="address">
+            </div>
+
+            <div class="list-group">
+                <a *ngFor="let address of addresses" (click)="onSelectedAddress(address)" class="list-group-item list-group-item-active">
+                    {{address.formattedAddress}}
+                </a>
             </div>
 
             <!-- submit button -->
@@ -33,3 +42,5 @@
         </form>
     </div>
 </div>
+
+<!-- {{addresses|json}} -->
